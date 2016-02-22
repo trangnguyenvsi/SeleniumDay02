@@ -3,15 +3,16 @@ package com.vsii.tsc.TSCSelenium.TrangLT;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.ie.*;
 import org.testng.Assert;
+import org.testng.annotations.*;
 
 public class BookFlightTest {
 	private WebDriver driver;
@@ -20,12 +21,12 @@ public class BookFlightTest {
 	private WebDriver driver2;
 	private LoginTest loginTest;
 
-	@Before
+	@BeforeTest
 	public void setUp() throws Exception {
 		loginTest = new LoginTest();
 	}
 
-	//@Test
+	@Test
 	public void bookSucc1() throws Exception {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
@@ -62,7 +63,7 @@ public class BookFlightTest {
 		driver.quit();
 	}
 	
-	//@Test
+	@Test
 	public void bookSucc2() throws Exception {
 		System.setProperty("webdriver.chrome.driver","F:\\chromedriver.exe");
 		driver1= new ChromeDriver();
@@ -87,7 +88,7 @@ public class BookFlightTest {
 		driver1.quit();
 	}
 	
-	//@Test
+	@Test
 	public void bookSucc3() throws Exception {
 		System.setProperty("webdriver.ie.driver","F:\\IEDriverServer.exe");
 		driver2= new InternetExplorerDriver();
@@ -119,7 +120,7 @@ public class BookFlightTest {
 	    return true;
 	}
 	
-	@After
+	@AfterTest
 	public void tearDown() throws Exception {
 	}
 

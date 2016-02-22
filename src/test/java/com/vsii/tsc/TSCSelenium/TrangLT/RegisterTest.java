@@ -3,15 +3,17 @@ package com.vsii.tsc.TSCSelenium.TrangLT;
 
 import java.util.concurrent.TimeUnit;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;;
+//import org.junit.Test;
+//import org.junit.Before;
+//import org.junit.After;
+import org.testng.annotations.*;
 
 /**
  * Unit test for simple App.
@@ -21,7 +23,7 @@ public class RegisterTest
 	 private WebDriver driver;
 	  private String baseUrl;
 
-	  @Before
+	  @BeforeTest
 	  public void setUp() throws Exception {
 	    driver = new FirefoxDriver();
 	    driver.manage().window().maximize();
@@ -60,7 +62,7 @@ public class RegisterTest
 	  }
 	 
 		  
-	  @After
+	  @AfterTest
 	  public void tearDown() throws Exception {
 	    driver.quit();
 	  }

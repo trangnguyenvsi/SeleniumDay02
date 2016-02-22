@@ -2,18 +2,19 @@ package com.vsii.tsc.TSCSelenium.TrangLT;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.*;
 
 public class LoginTest {
 	private WebDriver driver; 
 
-	@Before
+	@BeforeTest
 	public void setUp() throws Exception {
 		driver =new FirefoxDriver();
 		driver.manage().window().maximize();
@@ -46,7 +47,7 @@ public class LoginTest {
 		Assert.assertEquals(driver.findElement(By.xpath(".//*[contains(font,'Use our Flight Finder')]")).getText(), "Use our Flight Finder to search for the lowest fare on participating airlines. Once you've booked your flight, don't forget to visit the Mercury Tours Hotel Finder to reserve lodging in your destination city.");
 	}
 
-	@After
+	@AfterTest
 	public void tearDown() throws Exception {
 		driver.quit();
 	}
