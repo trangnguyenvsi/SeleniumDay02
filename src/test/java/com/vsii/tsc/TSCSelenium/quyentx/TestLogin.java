@@ -7,6 +7,7 @@ public class TestLogin {
 	@Test
 	public void testLoginSuccess(){
 		ModuleLogin.checkLoginSuccess();
+
 	}
 	
 	@Test

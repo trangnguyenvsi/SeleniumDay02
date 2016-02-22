@@ -11,7 +11,6 @@ public class Data {
 	static String LoginPasswordInvalid = "123456";
 	static String loginUnsuccessExpectedURL = "http://newtours.demoaut.com/mercurysignon.php";
 	
-	
 	static String regFirstNameValid = "Quyen";
 	static String regLastNameValid = "Ta";
 	static String regPhoneValid = "0987654321";
