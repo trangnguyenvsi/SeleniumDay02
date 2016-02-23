@@ -11,6 +11,11 @@ import org.testng.Assert;
 
 @SuppressWarnings("unused")
 public class checkLogin {
+	  private WebDriver driver;
+	  private String baseUrl;
+	  private boolean acceptNextAlert = true;
+	  private StringBuffer verificationErrors = new StringBuffer();
+//public class checkLogin {
 	  @Before
 	  public void setUp() throws Exception {
 	    driver = new FirefoxDriver();
